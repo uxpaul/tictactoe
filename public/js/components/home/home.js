@@ -2,12 +2,20 @@
 
     app.component('home', {
         templateUrl: 'js/components/home/home.html',
-        controller: function($http) {
+        controller: ['$http', 'socket', function($http, socket) {
+
+          socket.on('stats', (data) => console.log('Joueurs:', data.numClients))
+
+          
+            angular.extend(this, {
+                $onInit() {
+
+                    this.test = "TicTacToe"
 
 
-          this.test = "tictactoe"
-
-        }
+                }
+            })
+        }]
     })
 
 })(angular.module('app.home'))

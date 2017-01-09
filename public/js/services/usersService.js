@@ -1,25 +1,25 @@
 ((app) => {
     'use strict'
 
-    app.service('usersService', function($http) {
+    app.service('usersService', ['$http', 'apiConfig', function($http, apiConfig) {
         return {
 
             get() {
-                return $http.get('/api/users')
+                return $http.get(apiConfig.baseUrl + '/api/users')
             },
-            getPopulate(id){
-              return $http.get('/api/users/'+ id )
+            getPopulate(id) {
+                return $http.get(apiConfig.baseUrl + '/api/users/' + id)
             },
             add(users) {
-                return $http.post('/api/users', users)
+                return $http.post(apiConfig.baseUrl + '/api/users', users)
             },
             edit(users) {
-                return $http.put('/api/users/' + users._id, users)
+                return $http.put(apiConfig.baseUrl + '/api/users/' + users._id, users)
             },
             delete(users) {
-                return $http.delete('/api/users/' + users._id)
+                return $http.delete(apiConfig.baseUrl + '/api/users/' + users._id)
             }
         }
-    })
+    }])
 
 })(angular.module('app.services'))

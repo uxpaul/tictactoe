@@ -1,0 +1,9 @@
+body {
+  color:rgb(57, 204, 204);
+  text-align: center;
+}
+td {
+border: 1px solid black;
+height: 50px;
+width: 50px;
+}

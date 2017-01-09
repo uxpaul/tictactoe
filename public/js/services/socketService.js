@@ -2,7 +2,7 @@
   'use strict'
 
   app.factory('socket', ['$rootScope', function($rootScope) {
-    //  let socket = io.connect('http://localhost:8000/tictactoe');
+      let socket = io.connect('http://localhost:3090/tictactoe');
   //  let socket = io.connect('');
     return {
       on(eventName, callback) {

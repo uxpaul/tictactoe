@@ -2,9 +2,9 @@
 
 let usersController = require('../controllers/UsersController')
 
-module.exports = (app) => {
+module.exports = (app, io) => {
 
-    let ctrl = new usersController()
+    let ctrl = new usersController(io)
 
     app.get('/users', (req, res, next) => {
         return ctrl.find(req, res, next)
