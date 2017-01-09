@@ -1,0 +1,20 @@
+<fruits selected-fruit = $ctrl.fruit></fruits>
+<input type="number" ng-model="$ctrl.value">
+<button type="button" name="button" ng-click="$ctrl.add($ctrl.value,$ctrl.fruit )"> Add</button>
+{{$ctrl.fruit}}
+<table>
+    <tr>
+        <th>Produit</th>
+        <th>Quantité </th>
+        <th>Prix</th>
+    </tr>
+    <tr ng-repeat="line in $ctrl.panier">
+        <td>{{line.fruit.name}} </td>
+        <td>{{line.quantity}} </td>
+        <td>{{line.prix}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">TOTAL</td>
+      <td>{{$ctrl.prix}} </td>
+    </tr>
+</table>

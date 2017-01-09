@@ -1,0 +1,8 @@
+<label for="sex">Liste des fruits </label>
+<select ng-model="$ctrl.selectedFruit">
+
+              <option value="none"></option>
+              <option value="{{fruit}}" ng-repeat="fruit in $ctrl.fruits">{{fruit.name}}</option>
+
+</select>
+{{$ctrl.selectedfruit}}
