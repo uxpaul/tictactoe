@@ -2,5 +2,6 @@
 
 
 })(angular.module('app', [
-  'app.home'  
+  'app.home',
+  'app.services' 
 ]))

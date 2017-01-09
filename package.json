@@ -1,0 +1,29 @@
+{
+    "name": "tictactoe",
+    "version": "1.0.0",
+    "description": "tictactoe - socketio",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uxpaul/tictactoe.git"
+    },
+    "author": "paul de barthez",
+    "license": "ISC",
+    "dependencies": {
+        "angular": "^1.6.1",
+        "body-parser": "^1.15.2",
+        "cors": "^2.8.1",
+        "express": "^4.14.0",
+        "method-override": "^2.3.6",
+        "mongoose": "^4.6.8",
+        "morgan": "^1.7.0",
+        "path": "^0.12.7"
+    },
+    "bugs": {
+        "url": "https://github.com/uxpaul/tictactoe/issues"
+    },
+    "homepage": "https://github.com/uxpaul/tictactoe#readme"
+}
